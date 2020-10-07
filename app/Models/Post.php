@@ -14,6 +14,7 @@ class Post extends Model
         'desc',
         'content',
         'image_url',
+        'status',
     ];
 
     public function comments(){

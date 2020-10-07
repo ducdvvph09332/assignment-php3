@@ -14,6 +14,7 @@ class Comment extends Model
         'content',
         'student_id',
         'post_id',
+        'status',
     ];
 
     public function post(){
