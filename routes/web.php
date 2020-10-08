@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('client.welcome');
 });
 
-Route::get('/post', function(){
-    
-    $comment = Comment::find(1);
-    dd($comment->post->id);
+Route::prefix('/admin')->group(function(){
+    Route::get('/dashboard', function(){
+        return view('admin.layout.dashboard.index');
+    });
 });
