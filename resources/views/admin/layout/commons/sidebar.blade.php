@@ -34,7 +34,7 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="users" data-parent="#accordionExample">
                     <li>
-                        <a href="#">List</a>
+                        <a href="{{route('students.index')}}">List</a>
                     </li>
                     <li>
                         <a href="#">Create student </a>

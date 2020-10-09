@@ -24,6 +24,7 @@ class CategoryFactory extends Factory
         return [
             'parent_id' => $this->faker->numberBetween(1,10),
             'name' => $this->faker->name,
+            'total_post' => $this->faker->numberBetween(1,10),
             'status' => $this->faker->numberBetween(0,1),
         ];
     }
