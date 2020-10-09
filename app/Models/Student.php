@@ -19,4 +19,11 @@ class Student extends Model
         'address',
         'status',
     ];
+
+    public function posts(){
+        return $this->hasMany(Post::class, 'student_id','id');
+    }
+    public function comments(){
+        return $this->hasMany(Comment::class, 'student_id', 'id');
+    }
 }

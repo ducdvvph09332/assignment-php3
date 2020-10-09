@@ -22,9 +22,10 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
+            'student_id' => $this->faker->numberBetween(1,10),
             'desc' => $this->faker->realText(100, 2),
             'content' => $this->faker->realText(200, 2),
-            'image_url' => $this->faker->imageUrl($width = 640, $height = 480),
+            'image_url' => $this->faker->imageUrl($width = 100, $height = 100),
             'status' => $this->faker->numberBetween(0,1),
         ];
     }

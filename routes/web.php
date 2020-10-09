@@ -1,7 +1,9 @@
 <?php
 
-use App\Models\Comment;
-use App\Models\Post;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +25,8 @@ Route::prefix('/admin')->group(function(){
     Route::get('/dashboard', function(){
         return view('admin.layout.dashboard.index');
     });
+    Route::resource('students', StudentController::class);
+    Route::resource('posts', PostController::class);
+    Route::resource('comments', CommentController::class);
+    Route::resource('categories', CategoryController::class);
 });

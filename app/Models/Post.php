@@ -11,6 +11,7 @@ class Post extends Model
     protected $table = 'posts';
 
     protected $fillable = [
+        'student_id',
         'desc',
         'content',
         'image_url',
@@ -20,4 +21,13 @@ class Post extends Model
     public function comments(){
         return $this->hasMany(Comment::class, 'post_id', 'id');
     }
+
+    public function student(){
+        return $this->belongsTo(Student::class, 'student_id', 'id');
+    }
+
+    public function categories(){
+        return $this->belongsToMany(Category::class, 'category_post', 'post_id', 'category_id');
+    }
+
 }
